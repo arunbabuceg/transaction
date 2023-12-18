@@ -1,22 +1,20 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroComponent } from './hero/hero.component';  // Make sure you import HeroComponent correctly
 import { HeaderComponent } from './header/header.component';
-import HeroComponent from './hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

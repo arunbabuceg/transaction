@@ -5,9 +5,19 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
-export default class HeroComponent {
-  initials: string[] = ['JW', 'WW', 'CW'];
-  names: string[] = ['Jenny Wilson', 'Wade Warren', 'Cameron Williamson'];
-  lastSeens: string[] = ['Today, 12.30 pm', 'Today, 12.30 pm', 'Today, 12.30 pm'];
-  amounts: number[] = [-190, +870, +1200];
+export class HeroComponent {
+  users: User[] = [
+    new User('JW', 'Jenny Wilson', 'Today, 12.30 pm', -190),
+    new User('WW', 'Wade Warren', 'Today, 12.30 pm', 870),
+    new User('CW', 'Cameron Williamson', 'Today, 12.30 pm', 1200),
+  ];
+}
+
+export class User {
+  constructor(
+    public initials: string,
+    public name: string,
+    public lastSeen: string,
+    public amount: number
+  ) { }
 }
